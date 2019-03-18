@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#007BFF" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Post New Ad - OLX Pakistan</title>
+    <link rel="shortcut icon" type="image/png" href="../images/logo.png" />
+    <link
+      href="../bootstrap/css/bootstrap.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="manifest" href="../manifest.json" />
+    <link rel="stylesheet" type="text/css" href="../css/loading.css" />
+    <link rel="stylesheet" type="text/css" href="../css/loading-btn.css" />
+  </head>
+
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary navbar-shadow">
+      <a class="navbar-brand" href="./index.html"
+        ><img src="../images/logo-black.png" height="50px" alt="OLX Pakistan"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html"
+              ><i class="fas fa-home"></i> Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./viewByCat.html"
+              ><i class="fab fa-avianex"></i> View by Category</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./myWishList.html"
+              ><i class="fas fa-heart"></i> My Wishlist</a
+            >
+          </li>
+        </ul>
+
+        <a href="./postAd.html" class="btn btn-success my-2 my-sm-0 mr-1"
+          ><i class="fas fa-edit"></i> Post AD</a
+        >
+        <button class="btn btn-danger my-2 my-sm-0" onClick="logOut()">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+    </nav>
+
+    <div class="container col-md-9 col-lg-7 div-form mb-5 mt-2">
+      <div id="JumboArea" class="jumbotron text-white mt-2 ld-over-full" style="background-color: #FF9900">
+        <div class="ld ld-ring ld-spin"></div>
+        <h1><i class="fas fa-edit fa-lg"></i> Post a New Ad</h1>
+      </div>
+
+      <div class="form-group">
+        <label for="title">Ad Title:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          placeholder="Enter Title of Your Ad"
+        />
+      </div>
+
+      <div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="categories">Categories</label>
+          </div>
+          <select class="custom-select" id="categories">
+            <option value="0" selected>Choose...</option>
+            <option value="1">Cars</option>
+            <option value="2">Furniture</option>
+            <option value="3">Jobs</option>
+            <option value="4">Electronics & Appliance</option>
+            <option value="5">Mobile</option>
+            <option value="6">Bikes</option>
+            <option value="7">Books</option>
+            <option value="8">Fashion</option>
+            <option value="9">Pet</option>
+            <option value="10">Service</option>
+            <option value="11">Properties</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="adDesc">Description</label>
+        <textarea
+          class="form-control"
+          id="adDesc"
+          rows="3"
+          placeholder="Write complete description including Model, Year (if applicable)"
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Location:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="location"
+          placeholder="Your Location..."
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="price">Set a Price:</label>
+        <input
+          type="number"
+          class="form-control"
+          id="price"
+          placeholder="Price"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="price">Select Four Pictures:</label>
+        <input type="file" class="form-control" id="picure1" />
+      </div>
+
+      <div class="form-group">
+        <input type="file" class="form-control" id="picure2" />
+      </div>
+
+      <div class="form-group">
+        <input type="file" class="form-control" id="picure3" />
+      </div>
+
+      <div class="form-group">
+        <input type="file" class="form-control" id="picure4" />
+      </div>
+
+      <div class="form-group">
+        <label for="location">Contact Info:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Your Name..."
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="mobileNumber"
+          placeholder="Your Number..."
+        />
+      </div>
+      <div class="text-right">
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          onClick="adSubmit()"
+        >
+          Submit Ad
+        </button>
+      </div>
+    </div>
+    <nav class="navbar navbar-bottom navbar-light bg-dark">
+      <p class="text-white card-link">
+        Designed by:
+        <a
+          class="card-link"
+          href="https://www.twitter.com/MYousufSoomro/"
+          target="_blank"
+        >
+          Muhammad Yousuf
+        </a>
+      </p>
+    </nav>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <script src="../js/firebase-init.js"></script>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/addPost.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>OLX Pakistan</title>
+    <link
+      rel="stylesheet"
+      href="./bootstrap/css/bootstrap.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="./bootstrap/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link rel="shortcut icon" type="image/png" href="./images/logo.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="./css/loading.css" />
+    <link rel="stylesheet" type="text/css" href="./css/loading-btn.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary navbar-shadow">
+      <a class="navbar-brand" href="./index.html"
+        ><img src="./images/logo-black.png" height="50px" alt="OLX Pakistan"
+      /></a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"></ul>
+        <a class="btn btn-success my-2 my-sm-0" href="./pages/login.html">
+          <i class="fas fa-sign-in-alt"></i> Login
+        </a>
+      </div>
+    </nav>
+
+    <div class="container col-md-9 col-lg-7 div-form mb-5 mt-2">
+      <h1 id="JumboArea" class="text-center jumbotron text-white" style="background-color: #FF9900"><i class="fas fa-user-plus fa-lg"></i> Signup Form</h1>
+      <div id="spin-div" class="ld-over">
+        <div class="ld ld-ring ld-spin"></div>
+        <div class="form-row">
+          <div class="col-md-6">
+            <label for="fName">First name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="fName"
+              placeholder="First name"
+            />
+            <div id="fNameError"></div>
+          </div>
+          <div class="col-md-6">
+            <label for="lName">Last name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lName"
+              placeholder="Last name"
+            />
+            <div id="lNameError"></div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-6">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="example@domain.com"
+            />
+            <div id="emailError"></div>
+          </div>
+          <div class="col-md-3">
+            <label for="Password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+            />
+            <div id="passwordError"></div>
+          </div>
+          <div class="col-md-3">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="confirmPassword"
+              placeholder="Password"
+            />
+            <div id="confirmPasswordError"></div>
+          </div>
+        </div>
+
+        <div class="custom-control custom-checkbox">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            id="customCheck1"
+          />
+          <label class="custom-control-label" for="customCheck1">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback" id="termsCondError"></div>
+        </div>
+        <button
+          class="btn btn-primary col-md-12"
+          type="submit"
+          onClick="RunTest()"
+        >
+        <i class="fas fa-user-plus"></i> Sign up!
+        </button>
+        <hr />
+        <p class="p1">
+          Already have an account?
+          <a href="./pages/login.html" class="card-link"><i class="fas fa-sign-in-alt"></i> Login</a> Now
+        </p>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+    <script src="./js/firebase-init.js"></script>
+    <script src="./bootstrap/js/bootstrap.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./sw-check.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+body {
+  /* background-color: beige; */
+  background-image: url("../images/bg.jpg");
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#progressBar,
+#progressBarSearch {
+  visibility: hidden;
+}
+
+.custom-image {
+  width: 200px;
+  height: 150px;
+  padding: 3px;
+  margin: 5px;
+  border-style: outset;
+}
+
+.carousel-imgs {
+  height: 60vh;
+  width: 100%;
+}
+
+#JumboArea{
+  background-color: red;
+  background-image: linear-gradient(to right, #ffa722, #f59d1b, #ea9313, #e0890a, #d57f00);
+}
+
+.sticky-top{
+  background-image: linear-gradient(to right, #004ec2, #0061cf, #0073d9, #0085e3, #1296eb);
+}
+.navbar-footer{
+  background-image: linear-gradient(to right top, #303030, #33363b, #303d47, #29454f, #1e4d53);
+}
+
+#noData,
+#searchBox {
+  display: none;
+}
+
+#searchBox {
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.navbar-shadow{
+  box-shadow: 0px 3px 8px #aaaaaa;
+}
+
+.div-form {
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #bfbfbf;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+#form-progress-bar:hover{
+  cursor: not-allowed;
+}
+
+.progress-bar{
+  display: none;
+}
+
+.ld{
+  font-size: 20vh;
+}
+
+h1{
+  text-shadow: 5px 3px 8px black;
+}
